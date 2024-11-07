@@ -1,0 +1,63 @@
+.select {
+    border: var(--lengths-app-select-border-width) solid var(--colors-app-primary);
+    border-radius: var(--radiuses-app-first-border-radius);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--times-app-transition-time);
+    min-width: 150px;
+    color: var(--colors-app-primary);
+    font-weight: var(--fonts-special-weight);
+    position: relative;
+}
+
+.select * {
+    transition: all var(--times-app-transition-time);
+    fill: var(--colors-app-primary);
+}
+
+.select.open {
+    border-radius: var(--radiuses-app-second-border-radius) var(--radiuses-app-second-border-radius) 0 0;
+    border-color: var(--colors-app-primary) var(--colors-app-primary) transparent var(--colors-app-primary);
+}
+
+.select.open .choice {
+    border-radius: var(--radiuses-app-second-border-radius) var(--radiuses-app-second-border-radius) 0 0;
+}
+
+.select.open .choices {
+    border-color: var(--colors-app-primary);
+    z-index: 10;
+}
+
+.select .choice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    width: calc(100% - 2 * var(--paddings-app-sides-select-padding));
+    padding: var(--paddings-app-top-bottom-select-padding) var(--paddings-app-sides-select-padding);
+    height: 24px;
+    border-radius: var(--radiuses-app-first-border-radius);
+    background-color: var(--colors-app-background-color);
+}
+
+.select .choices {
+    overflow: hidden;
+    width: 100%;
+    left: calc(-1 * var(--lengths-app-select-border-width));
+    position: absolute;
+    top: 100%;
+    border-radius: var(--radiuses-app-first-border-radius);
+    border: var(--lengths-app-select-border-width) solid transparent;
+    border-style: none solid solid solid;
+}
+
+.select .choices .choice:hover {
+    background-color: var(--colors-app-background-color-darker);
+}
+
+.select .choices:last-child {
+    border-radius: 0 0 var(--radiuses-app-second-border-radius) var(--radiuses-app-second-border-radius);
+}

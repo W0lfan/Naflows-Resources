@@ -1,0 +1,62 @@
+.input {
+    position: relative;
+    width: fit-content;
+    margin-top: 50px;
+}
+
+.input * {
+    transition: all var(--times-app-transition-time);
+}
+
+.input input {
+    padding: 
+        var(--paddings-app-top-bottom-input-padding) 
+        var(--paddings-app-sides-input-padding);
+    border: var(--lengths-app-select-border-width) solid 
+        var(--colors-app-primary);
+    border-radius: var(--radiuses-app-first-border-radius);
+    z-index: 10;
+    outline: none;
+}
+
+.input input:focus {
+    border-color: var(--colors-app-primary-darker);
+}
+
+.input label {
+    position: absolute;
+    height: calc(100% - 2 * (
+        var(--lengths-app-input-border-width)
+    ) - 2 * (
+        var(--paddings-app-top-bottom-input-padding)
+    ));
+    width: 0px;
+    border-radius: var(--radiuses-app-first-border-radius);
+    left: var(--lengths-app-input-border-width);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    margin: auto;
+    color: var(--colors-app-text-color-on-background-lighter);
+}
+
+.input:hover, .input:focus-within, .input.in {
+    .input input {
+        z-index: 1;
+    }
+    .input label {
+        background-color: var(--colors-app-text-color-on-primary);
+        padding: 0 var(--paddings-app-sides-input-label-padding);
+        font-size: var(--fonts-app-input-label-font-size);
+        transform: translate(0, calc(-100% - 2 * (
+            var(--lengths-app-input-border-width)
+        )));
+        z-index: 2;
+        color: var(--colors-app-primary);
+        width: fit-content;
+    }
+}

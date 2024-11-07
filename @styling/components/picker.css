@@ -1,0 +1,41 @@
+.picker {
+    width: calc(100% - 10px);
+    padding: 5px;
+    height: fit-content;
+    position: relative;
+}
+
+.picker .selecter-display {
+    background-color: var(--app-hues-2);
+    height: calc(100% - 10px);
+    border-radius: var(--app-main-border-radius);
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.picker .selecter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.picker .selecter .selection {
+    width: calc(100% - 20px);
+    cursor: pointer;
+    border-radius: var(--app-main-border-radius);
+    display: flex;
+    padding: 5px 10px;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+    justify-content: center;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.picker .selecter .selection.active {
+    color: white;
+}

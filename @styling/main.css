@@ -1,0 +1,61 @@
+:root {
+  /* Primary and Secondary Colors */
+  --app-primary: #3E4DED;
+  --app-secondary: #28b88d;
+
+  /* Text and Background Colors */
+  --app-background-color: #ffffff;
+  --app-text-color-on-primary: #ffffff;
+  --app-text-color-on-background: #000000;
+
+  /* Functional Colors */
+  --functional-error: #ED583E;
+  --functional-warning: #ED9B3E;
+  --functional-success: #2FB828;
+
+  /* Manually calculate the lighter and darker variations */
+  --app-primary-darker: #3644d3; /* Example darker version */
+  --app-primary-lighter: #4b5ff0; /* Example lighter version */
+
+  --app-text-color-on-background-lighter: #4d4d4d; /* Example lighter version */
+
+  --app-background-color-lighter: #e6e6e6; /* Example lighter version */
+  --app-background-color-darker: #e6e6e6; /* Example darker version */
+
+  --app-secondary-darker: #239b77; /* Example darker version */
+  --app-secondary-lighter: #33c99e; /* Example lighter version */
+
+  --functional-error-lighter: #f3a595; /* Example lighter version */
+  --functional-success-lighter: #4fd055; /* Example lighter version */
+  --functional-warning-lighter: #efb56e; /* Example lighter version */
+
+  /* Radiuses */
+  --app-first-border-radius: 24px;
+  --app-second-border-radius: 10px;
+
+  /* Paddings */
+  --app-first-padding: 20px;
+  --app-second-padding: 10px;
+
+  --app-top-bottom-button-padding: 10px;
+  --app-sides-button-padding: 15px;
+
+  --app-top-bottom-select-padding: 5px;
+  --app-sides-select-padding: 15px;
+
+  --app-top-bottom-input-padding: 10px;
+  --app-sides-input-padding: 15px;
+  --app-sides-input-label-padding: 5px;
+
+  /* Lengths */
+  --app-button-border-width: 2px;
+  --app-select-border-width: 2px;
+  --app-input-border-width: 2px;
+
+  /* Times */
+  --app-transition-time: 0.3s;
+
+  /* Fonts */
+  --special-weight: 600;
+  --app-input-label-font-size: 13px;
+}
